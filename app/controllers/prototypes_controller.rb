@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :set_prototype, only: [:show, :edit]
+  before_action :set_prototype, only: [:show, :edit, :update]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :move_to_index,only: [:edit]
 
@@ -30,7 +30,11 @@ class PrototypesController < ApplicationController
   end
 
   def update
-  
+    if @prototype.update(prototype_params)
+      redirect_to prototype_path(@prototype)
+    else
+      render :edit
+    end
   end
 
   def destroy
