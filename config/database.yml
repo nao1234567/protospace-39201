@@ -19,7 +19,7 @@ development:
   username: root
   password:
   host: localhost
-  database: protospace-39201_development
+  database: protospace_39201_development
 
 
 # Warning: The database defined as "test" will be erased and
@@ -31,7 +31,7 @@ test:
   username: root
   password:
   host: localhost
-  database: protospace-39201_test
+  database: protospace_39201_test
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
 # ever seen by anyone, they now have access to your database.
